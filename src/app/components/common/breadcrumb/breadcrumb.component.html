@@ -1,0 +1,18 @@
+<div class="head-title">
+    <div class="left">
+      <h1>{{ mainRoute | uppercase }}</h1>
+      <ul class="breadcrumb">
+        <li>
+          <div>
+            JOBIFY
+          </div>
+        </li>
+        <li class="breadcrumb" *ngFor="let route of routes; let i = index">
+          <span><i class='bx bx-chevron-right'></i></span>
+          <div [ngClass]="{'active': i === routes.length - 1 }">
+            {{ route?.path | uppercase }}
+          </div>
+        </li>
+      </ul>
+    </div>
+</div>

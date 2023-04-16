@@ -1,0 +1,14 @@
+<section class="sidebar">
+    <a href="#" class="brand">
+      <i class='bx bxs-plane-take-off' ></i>
+      <span class="text">J O B I F Y</span>
+    </a>
+    <ul class="side-menu top">
+      <li  *ngFor="let menu of menus" (click)="navigate(menu.redirectTo)">
+        <div>
+          <i [class]="menu.icon" ></i>
+          <span class="text">{{ menu.name }}</span>
+        </div>
+      </li>
+    </ul>
+</section>

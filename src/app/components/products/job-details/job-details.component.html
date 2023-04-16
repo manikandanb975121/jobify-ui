@@ -1,0 +1,51 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="card">
+    <p class="card-title">JOBS DETAILS</p>
+    <div class="card-header">
+        <div>
+            <p class="title">Job Id</p>
+            <p>#{{ job?.JobID }}</p>
+        </div>
+        <div>
+            <p class="title">Job Title</p>
+            <p>{{ job?.jobTitle }}</p>
+        </div>
+        <div>
+            <p class="title">Applied Date</p>
+            <p>{{ job?.appliedDate | date: 'medium' }}</p>
+        </div>
+    </div>
+
+    <p class="card-title">APPLIER DETAILS</p>
+    <div class="card-header">
+        <div>
+            <p class="title">Name</p>
+            <p>{{ job?.applierName }}</p>
+        </div>
+        <div>
+            <p class="title">Address</p>
+            <p>{{ job?.applierAddress }}</p>
+        </div>
+        <div>
+            <p class="title">Phone</p>
+            <p>{{ job?.contactNo }}</p>
+        </div>
+    </div>
+
+
+    <p class="card-title">COMPANY DETAILS</p>
+    <div class="card-header">
+        <div>
+            <p class="title">Name</p>
+            <p>{{ job?.company }}</p>
+        </div>
+        <div>
+            <p class="title">Job Description</p>
+            <p>{{ job?.jobDescription }}</p>
+        </div>
+        <div>
+            <p class="title">Status</p>
+            <p>{{ job?.status | replace : '_' : ' ' : true }}</p>
+        </div>
+    </div>
+</div>

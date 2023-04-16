@@ -1,0 +1,12 @@
+/* CONTENT */
+#content {
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+    transition: .3s ease;
+}
+
+#sidebar.hide ~ #content {
+    width: calc(100% - 60px);
+    left: 60px;
+}

@@ -1,0 +1,7 @@
+<div class="list" (click)="navigateToProduct(status.name)">
+    <i [class]="status.icon" [style.backgroundColor]="status.color"></i>
+    <span class="text">
+      <h3>{{ status.name | replace : '_' : ' ' : true }}</h3>
+      <p>{{ status.count }}</p>
+    </span>
+</div>

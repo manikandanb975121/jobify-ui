@@ -1,0 +1,4 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="status-card-list">
+    <app-status-card *ngFor="let status of status$ | async" [status]="status"></app-status-card>
+</div>

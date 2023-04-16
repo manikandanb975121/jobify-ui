@@ -1,0 +1,34 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="table">
+    <div class="head">
+        <input class="text-box" placeholder="Search..." [ngModel]="searchText" (ngModelChange)="searchOnChange($event)"/>
+        <select class="text-box" (change)="onChange($event)">
+            <option *ngFor="let sta of status" [value]="sta.value" [selected]="sta.value === selectedStatus">{{sta.name}}</option>
+        </select>
+        <div class="pagination">
+            <div class="border" [ngClass]="{'disabled': currentPage === 1 }" (click)="navigate(currentPage, 'back')">&laquo;</div>
+            <div *ngFor="let page of pages" class="border" [ngClass]="{'active': page === currentPage }" (click)="navigate(page, null)">{{page}}</div>
+            <div class="border" [ngClass]="{'disabled': count === currentPage }" (click)="navigate(currentPage, 'forward')">&raquo;</div>
+        </div>
+    </div>
+    <table>
+        <thead>
+          <tr>
+            <th *ngFor="let columns of jobsColumns">{{ columns | replace : '_' : ' ' : true }}</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let job of jobs; let i = index" (click)="navigateToJobDetails(job.id)">
+                <td>{{ ((currentPage - 1) * 10) + i + 1 }}</td> 
+                <td>{{ job.jobID }}</td>
+                <td>{{ job.jobTitle }}</td>  
+                <td>{{ job.company }}</td>  
+                <td>{{ job.applierName }}</td>  
+                <td><span class="status" [class]="job.status">{{ job.status | replace : '_' : ' ' : true }}</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

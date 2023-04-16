@@ -1,0 +1,37 @@
+.card {
+    grid-gap: 24px;
+    margin-top: 14px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--light);
+    padding: 20px;
+    height: 100%;
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    align-items: center;
+}
+
+.card-title {
+    letter-spacing: 7px;
+    word-spacing: 10px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    padding-top: 5px;
+}
+
+.title {
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
